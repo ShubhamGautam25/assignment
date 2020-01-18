@@ -1,0 +1,33 @@
+.site-header {
+	background-color: #fff;
+	padding-left:  30px;
+	box-shadow: 0px 3px 2px #00000008;
+	position: relative;
+	z-index: 9;
+	.logo-box {
+		img {
+			max-width: 50px;
+		}
+	}
+	.profile-right {
+		button {
+			display: flex;
+			.user-name {
+				padding-left: 10px;
+				font-weight: 600;
+				font-size: 12px;
+				font-family: 'Poppins', sans-serif;
+			}
+		}
+		.user-img {
+			max-width: 30px;
+			height: 30px;
+			overflow: hidden;
+			border-radius: 100%;
+			margin-bottom: 0;
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

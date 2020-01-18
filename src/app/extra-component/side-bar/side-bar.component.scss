@@ -1,0 +1,31 @@
+
+
+.siderbar-menu {
+    ul{
+
+        padding: 30px 0;
+        li{
+
+            padding: 0 30px 15px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eef2f3;
+            a{
+                text-decoration: none;
+                font-weight: 400;
+                font-size: 16px;
+                color: #9899ac;
+                transition: all 0.3s ease-in;
+                &:hover{
+                    color: #114593;
+                    transition: all 0.3s ease-in;
+                }
+
+                .material-icons{
+                    font-size: 20px;
+                    vertical-align: middle;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+}

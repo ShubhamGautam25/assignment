@@ -1,0 +1,18 @@
+<header>
+    <div class="site-header d-flex justify-content-between d-block-res">
+        <div class="logo-box">
+          <figure>
+              <img src="../../../assets/images/logo.png" alt="">
+          </figure>
+            <!-- <h3>Test Project</h3> -->
+        </div>
+        <div class="profile-right align-self-center">
+            <button mat-button [matMenuTriggerFor]="menu">  
+                <figure class="user-img align-self-center"><img src="../../../assets/images/user.png" alt=""></figure>    <span class="user-name align-self-center">John Doe</span>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="Logout()"> Logout </button>
+            </mat-menu>
+        </div>
+    </div>
+</header>
