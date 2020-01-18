@@ -19,31 +19,32 @@
               formControlName="name"
             />
             <mat-error *ngIf="errorHandling('name', 'required')">
-              First Name is required.
+              Name is required.
             </mat-error>
             <mat-error *ngIf="errorHandling('name', 'minlength')"
-              >First Name must be at least 3 characters</mat-error
+              >Name must be at least 3 characters</mat-error
             >
             </mat-form-field>
           
             <mat-form-field>
               <mat-label>Email <span>*</span></mat-label>
               <input type="email" matInput formControlName="email" />
-              <mat-error *ngIf="errorHandling('emailAddress', 'required')">
-                Corporation Email Address is required.
+              <mat-error *ngIf="errorHandling('email', 'required')">
+                 Email  is required.
               </mat-error>
-              <mat-error *ngIf="errorHandling('emailAddress', 'email')"
+              <mat-error *ngIf="errorHandling('email', 'email')"
                 >Email must be like "abc@example.com".</mat-error
               >
             </mat-form-field>
           
             <mat-form-field>
-              <mat-label>Minimal <span>*</span></mat-label>
+              <mat-label>Minimal </mat-label>
               <mat-select  formControlName="minimal"
               (selectionChange)="onStateChange($event.value)">
                 <mat-option *ngFor="let stateName of MinimalStateList" [value]="stateName">{{stateName}}</mat-option>
               </mat-select>
             </mat-form-field>
+
               <mat-form-field class="example-full-width">
                 <input matInput placeholder="State" aria-label="State" [matAutocomplete]="auto" [formControl]="stateCtrl">
                 <mat-autocomplete #auto="matAutocomplete">
@@ -62,9 +63,17 @@
                     <input
                     matInput
                     maxlength="10"
+                    minlength="10"
                     onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;"
                     formControlName="phone"
                   />
+                  <mat-error *ngIf="errorHandling('phone', 'required')">
+                    Phone is required.
+                 </mat-error>
+                 <mat-error *ngIf="errorHandling('phone', 'minlength')">
+                  Phone must be at least 10 digit.
+               </mat-error>
+                 
                   </mat-form-field>
               
                   <mat-form-field>
@@ -72,10 +81,13 @@
                     <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="date" >
                     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                     <mat-datepicker #picker></mat-datepicker>
+                    <mat-error *ngIf="errorHandling('date', 'required')">
+                      Date  is required.
+                   </mat-error>
                   </mat-form-field>
               
                   <mat-form-field>
-              <mat-label>Disabled <span>*</span></mat-label>
+              <mat-label>Disabled </mat-label>
               <mat-select  formControlName="disabled"
               (selectionChange)="onStateChange($event.value)">
                 <mat-option *ngFor="let state of MinimalStateList" [value]="state">{{state}}</mat-option>

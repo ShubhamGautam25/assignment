@@ -17,7 +17,6 @@ import { MatButtonModule,
   MatChipsModule, 
   MatMenuModule} from '@angular/material';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { ValidationService } from '../shared/services/validation.service';
 import { AdminComponent } from './admin.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HeaderComponent } from '../extra-component/header/header.component';
@@ -52,6 +51,6 @@ import { SideBarComponent } from '../extra-component/side-bar/side-bar.component
     MatChipsModule,
     MatMenuModule,
   ],
-  providers:[ValidationService]
+  providers:[]
 })
 export class AdminModule { }
